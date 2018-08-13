@@ -11,9 +11,15 @@
 			replace: false,
 			// controller: 'BooksController',
 			link: function(scope, element, attrs) {
-				console.log(scope);
-				console.log(element);
-				console.log(attrs);
+				/*element.on('click', function(e) {
+					// var $this = angular.element;
+					// $this(e.target).parent().toggleClass('grey');
+					$(e.target).parent().toggleClass('grey');
+				})*/
+				scope.clickTr = function(e){
+					$(e.currentTarget).toggleClass('grey');
+					element.children().css('border', '2px solid #cc0000');
+				}
 			}
 		};
 	});
