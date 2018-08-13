@@ -11,7 +11,7 @@
 		<tbody>
 			<tr ng-repeat="book in books" ng-click="clickTr($event)">
 				<td>{{$index + 1}}</td>
-				<td>{{book.title}}</td>
+				<td>{{book.title | myFilter : 111 : 222}}</td>
 				<td>{{book.year}}</td>
 				<td>{{book.price}}</td>
 				<td>{{book.price | currency : '$ ' : 0}}</td>
