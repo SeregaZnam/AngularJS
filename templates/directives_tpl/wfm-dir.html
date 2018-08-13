@@ -14,6 +14,8 @@
 				<td>{{book.title}}</td>
 				<td>{{book.year}}</td>
 				<td>{{book.price}}</td>
+				<td>{{book.price | currency : '$ ' : 0}}</td>
+				<!-- <td>{{book.price | number : 2}} $</td> -->
 			</tr>
 		</tbody>
 	</table>

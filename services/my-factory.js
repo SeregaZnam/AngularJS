@@ -4,7 +4,9 @@
 
 	var app = angular.module('MyApp');
 
-	app.factory('MyFactory', [function(){
+	app.factory('MyFactory', ['$filter', function($filter){
+		var testPrice = $filter('currency')(1000, 'USD ', 0);
+		console.log(testPrice);
 		return {
 			books: [
 				{title: 'Книга 1', year: 1900, price: 100},
