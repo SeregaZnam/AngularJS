@@ -20,26 +20,23 @@
 
 			<!-- <h1 ng-controller="MainController">Кол-во книг: {{books.length}}</h1> -->
 
-			<div ng-controller="BooksController">
+			<!-- <div ng-controller="BooksController">
 
 				<wfm-dir></wfm-dir>
 
-				{{data.key1}}
-				<br>
-				{{data.key2}}
+			</div> -->
 
-			</div>
-
+			<div ng-view></div>
 
 		</div>
 	</main>
 	
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
 	<script src="https://code.angularjs.org/1.7.2/i18n/angular-locale_ru-ru.js"></script>
 	<script src="script.js"></script>
 	<script src="services/my-factory.js"></script>
-	<script src="controllers/main-controller.js"></script>
 	<script src="controllers/books-controller.js"></script>
 	<script src="directives/wfm-dir.js"></script>
 </body>

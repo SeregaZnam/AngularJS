@@ -4,48 +4,13 @@
 
 	var app = angular.module('MyApp');
 
-	app.controller('BooksController', ['$scope', '$log', 'MyFactory', '$http', function($scope, $log, MyFactory, $http){
-		$scope.addBooks = function() {
-			if (angular.isDefined($scope.name)) {
-				$scope.books.push({
-					title: $scope.name,
-					year: 'XXXX',
-					price: 'XXX'
-				});
-			} else {
-				alert('Error!');
-			}
-			$scope.name = '';
-		};
-		$scope.books = MyFactory.books; 
-		$scope.test = 'TEST';
-
-		// $http({method: 'GET', url: 'data.html'}).
-		// 	then(function(res, status){
-		// 		console.log(res.data);
-		// 		console.log(res.status);
-		// 	},function(res,status){
-		// 		alert('Error!');
-		// 	});
-
-		// $http.get('data.html').
-		// 	then(function(res, status){
-		// 		console.log(res.data);
-		// 		console.log(res.status);
-		// 	},function(res, status){
-		// 		alert('Error!');
-		// 	});
+	app.controller('BooksController', ['$scope', '$http', function($scope, $http){
+		
+		// $scope.books = MyFactory.books; 
 			
-		var data = {
-			var1: 'Переменная 1',
-			var2: 'Переменная 2'
-		};
-
-		$http.post('data.php', data).
+		$http.post('books.php').
 			then(function(res){
-				// console.log(res.data);
-				// console.log(res.status);
-				$scope.data = res.data;
+				$scope.books = res.data;
 			}, function(error){
 				alert(error);
 			})

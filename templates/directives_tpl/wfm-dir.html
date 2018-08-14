@@ -4,6 +4,7 @@
 			<tr>
 				<th>ID</th>
 				<th>Название</th>
+				<th>Автор</th>
 				<th>Год</th>
 				<th>Цена</th>
 			</tr>
@@ -12,10 +13,9 @@
 			<tr ng-repeat="book in books" ng-click="clickTr($event)">
 				<td>{{$index + 1}}</td>
 				<td>{{book.title | myFilter : 111 : 222}}</td>
+				<td>{{book.author}}</td>
 				<td>{{book.year}}</td>
-				<!-- <td>{{book.price}}</td> -->
-				<td>{{book.price | currency : '$ ' : 0}}</td>
-				<!-- <td>{{book.price | number : 2}} $</td> -->
+				<td>{{book.price | currency : 'руб.' : 0}}</td>
 			</tr>
 		</tbody>
 	</table>
