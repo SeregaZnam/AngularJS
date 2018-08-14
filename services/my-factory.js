@@ -6,7 +6,7 @@
 
 	app.factory('MyFactory', ['$filter', function($filter){
 		var testPrice = $filter('currency')(1000, 'USD ', 0);
-		console.log(testPrice);
+		// console.log(testPrice);
 		return {
 			books: [
 				{title: 'Книга 1', year: 1900, price: 100},
