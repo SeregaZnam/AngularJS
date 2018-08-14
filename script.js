@@ -10,8 +10,9 @@
 				controller: 'BooksController',
 				templateUrl: 'templates/books.html'
 			})
-			.when('/test', {
-				template: '<div>TEST</div>'
+			.when('/book/:id', {
+				controller: 'BookController',
+				templateUrl: 'templates/book.html'
 			})
 			.when('/404', {
 				templateUrl: 'templates/404.html'
